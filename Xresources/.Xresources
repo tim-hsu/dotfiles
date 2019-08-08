@@ -1,0 +1,61 @@
+URxvt.font: xft: VictorMono:size=14, \
+            xft: Inconsolata Nerd Font Mono:size=14, \
+            xft: DejaVu Sans:size=14, \
+            xft: Monospace:size=14
+
+Xft.dpi:               110
+Xft.antialias:         true
+Xft.hinting:           true
+Xft.rgba:              rgb
+Xft.autohint:          true
+Xft.hintstyle:         hintfull
+Xft.lcdfilter:         lcdfilter
+
+URxvt*termName:        rxvt-256color
+URxvt.depth:           32
+URxvt.scrollBar:       false
+URxvt*loginShell:      true
+URxvt.intensityStyles: false
+URxvt.iso14755:        false
+URxvt.iso14755_52:     false
+
+! Extensions
+URxvt.perl-ext-common: default,matcher,resize-font,url-select,keyboard-select,clipboard
+URxvt.colorUL: #4682B4
+! matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+! resize-font
+!URxvt.resize-font.smaller: C-j
+!URxvt.resize-font.bigger:  C-k
+! url-select
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: /usr/bin/xdg-open
+URxvt.url-select.underline: true
+! keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! clipboard
+URxvt.clipboard.autocopy: true
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+
+
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: [90]#282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
