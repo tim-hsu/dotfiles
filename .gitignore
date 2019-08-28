@@ -1,2 +1,4 @@
 __pycache__
 ranger/**/__init__.py
+ranger/**/plugins/devicons.py
+ranger/**/plugins/devicons_linemode.py
