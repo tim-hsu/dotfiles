@@ -32,10 +32,8 @@ noremap <leader>s : setlocal spell!<CR>
 
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
-" Plug 'davidhalter/jedi-vim'
 Plug 'ajh17/vimcompletesme'
 call plug#end()
