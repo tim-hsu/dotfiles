@@ -1,4 +1,7 @@
-__pycache__
+__pycache__/
+*.py[cod]
+
+# ranger devicons files
 ranger/**/__init__.py
 ranger/**/plugins/devicons.py
 ranger/**/plugins/devicons_linemode.py
