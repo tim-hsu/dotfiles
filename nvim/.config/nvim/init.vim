@@ -1,5 +1,6 @@
 filetype plugin on                  " load plugins based on file type
 filetype indent on                  " load indent settings based on file type
+colorscheme dim                     " this scheme only uses ANSI colors
 syntax on                           " enable syntax highlighting
 
 if !has("nvim")
