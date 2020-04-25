@@ -29,7 +29,9 @@ set laststatus=2
 
 let mapleader="\\"
 let maplocalleader="\\"
-noremap <leader>s : setlocal spell!<CR>
+noremap  <leader>s :setlocal spell!<CR>     " spell check
+vnoremap <C-c> "+y :let @+=@*<CR>           " copy into @+ and @*
+map      <C-v> "+P                          " paste from @+
 
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')
