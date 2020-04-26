@@ -17,3 +17,10 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 # misc
 export EDITOR=nvim
+
+# add julia path
+export PATH="$PATH:$HOME/ext/julia-1.4.0/bin"
+
+# fzf customization
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
