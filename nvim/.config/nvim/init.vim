@@ -12,7 +12,7 @@ set hlsearch                        " highlight all search results
 set ignorecase smartcase            " search case-insensitively unless 
                                     " using uppercase characters
 set incsearch                       " search strings incrementally
-set relativenumber                  " set line number
+set number                          " set line number
 set backspace=indent,eol,start      " proper backspace behavior
 set autoindent                      " copy indent from previous line
 set ruler                           " show row and column information
