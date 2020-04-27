@@ -20,5 +20,8 @@ unset __conda_setup
 # fzf customization
 [ -r /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
 
+# set up keychain
+[ $(command -v keychain) ] && eval $(keychain --quiet --noask --eval id_rsa)
+
 # drop into fish
 [[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish

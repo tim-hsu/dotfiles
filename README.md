@@ -7,6 +7,7 @@ The dotfiles are only a part of the configuration and the whole customized user 
 * In general:
     * `miniconda`
     * `julia`
+    * `keychain`
     * `fd`
     * `fzf` (shell extensions may not be enabled by default depending on the package manager)
     * Fonts: Inconsolata, Iosevka
