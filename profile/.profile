@@ -15,9 +15,6 @@ export PYLINTHOME="$XDG_CACHE_HOME"/pylint
 export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc-2.0
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
-# misc
-export EDITOR=nvim
-
 # add julia path
 export PATH="$PATH:$HOME/ext/julia-1.4.0/bin"
 

@@ -13,8 +13,9 @@ The dotfiles are only a part of the configuration and the whole customized user 
     * Fonts: Inconsolata, Iosevka
 * For `vim` or `neovim`:
     * The `vim-instant-markdown` plugin needs [additional installation steps](https://github.com/suan/vim-instant-markdown)
-* For `ranger` file preview:
+* For `ranger` preview:
     * `w3m`
     * `atool`
-    * `pandoc`
-    * Check out the `scope.sh` file for more information
+    * `highlight`
+    * `pandoc` (haskell dependencies)
+    * Check out the `scope.sh` file or `pacman -Si ranger` for more information

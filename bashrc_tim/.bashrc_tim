@@ -17,8 +17,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# fzf customization
-[ -r /usr/share/fzf/completion.bash ] && . /usr/share/fzf/completion.bash
+# environmental variables 
+export EDITOR=nvim
 
 # set up keychain
 [ $(command -v keychain) ] && eval $(keychain --quiet --eval id_rsa)
