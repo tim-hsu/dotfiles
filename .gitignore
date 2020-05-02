@@ -7,4 +7,5 @@ ranger/**/plugins/devicons.py
 ranger/**/plugins/devicons_linemode.py
 
 # nvim/vim
+nvim/**/autoload/
 .netrwhist

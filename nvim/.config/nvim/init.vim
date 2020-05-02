@@ -1,39 +1,32 @@
-filetype plugin on                  " load plugins based on file type
-filetype indent on                  " load indent settings based on file type
-colorscheme dim                     " this scheme only uses ANSI colors
-syntax on                           " enable syntax highlighting
-
-if !has("nvim")
-    set nocompatible                " don't emulate vi
+if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
+	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
+	autocmd VimEnter * PlugInstall
 endif
 
-set showmatch                       " highlight matching brace
-set hlsearch                        " highlight all search results
-set ignorecase smartcase            " search case-insensitively unless 
-                                    " using uppercase characters
-set incsearch                       " search strings incrementally
-set number                          " set line number
-set backspace=indent,eol,start      " proper backspace behavior
-set autoindent                      " copy indent from previous line
-set ruler                           " show row and column information
-set showcmd                         " show current command in status line
-set splitbelow splitright           " split to below and right 
-set wildmenu                        " command-line completion
-set wildmode=longest:list,full      " configure wildmenu
-set tabstop=4                       " show tabs as 4 spaces
-set softtabstop=4                   " number of spaces for inserting a tab
-set shiftwidth=4                    " number of spaces for indenting 
-set expandtab                       " convert tabs into spaces
-set smarttab                        " cursor stays put during Ctrl+u, Ctlr+d
-set laststatus=2                    " always show status line
-set t_Co=256                        " set if term supports 256 colors
-set path+=**                        " Searches current directory recursively
+filetype plugin on                  " Load plugins based on file type
+filetype indent on                  " Load indent settings based on file type
+syntax on                           " Enable syntax highlighting
+colorscheme dim                     " This scheme only uses ANSI colors and
+                                    " should match the terminal colors
 
-let mapleader="\\"
-let maplocalleader="\\"
-noremap  <leader>s :setlocal spell!<CR>     " spell check
-vnoremap <C-c> "+y :let @+=@*<CR>           " copy into @+ and @*
-map      <C-v> "+P                          " paste from @+
+set nocompatible                    " Don't emulate vi
+set showmatch                       " Highlight matching brace
+set hlsearch                        " Highlight all search results
+set ignorecase                      " Search case insensitively
+set incsearch                       " Search strings incrementally
+set number                          " Set line number
+set backspace=indent,eol,start      " Proper backspace behavior
+set autoindent                      " Copy indent from previous line
+set ruler                           " Show row and column information
+set showcmd                         " Show current command in status line
+set splitbelow splitright           " Split to below and right 
+set wildmode=longest,list,full      " Configure autocompletion
+set tabstop=4                       " Show tabs as 4 spaces
+set softtabstop=4                   " Number of spaces for inserting a tab
+set shiftwidth=4                    " Number of spaces for indenting 
+set expandtab                       " Convert tabs into spaces
 
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')
@@ -42,7 +35,26 @@ Plug 'tpope/vim-surround'                               " change surrounds
 Plug 'itchyny/lightline.vim'                            " lightline status line
 Plug 'ajh17/vimcompletesme'                             " light-weight tab-completion
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}   " markdown preview
+Plug 'preservim/nerdtree'
 call plug#end()
+
+let mapleader=","
+
+" Toggle hlsearch
+noremap <leader>h :set hlsearch!<CR>
+
+" Spell check
+noremap <leader>s :setlocal spell!<CR>
+
+" Toggle NERD tree
+map <leader>n :NERDTreeToggle<CR>
+
+" Copy into @+ and @*, and paste from @+
+vnoremap <C-c> "+y :let @+=@*<CR>
+map      <C-p> "+P
+
+" Replace all
+nnoremap S :%s//g<Left><Left>
 
 " Remap splits navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
