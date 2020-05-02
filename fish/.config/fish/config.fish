@@ -1,7 +1,11 @@
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval "$HOME"/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
+# miniconda
+set MINICONDA_PATH "$HOME/ext/miniconda3"
+if test -d $MINICONDA_PATH
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    eval "$MINICONDA_PATH"/bin/conda "shell.fish" "hook" $argv | source
+    # <<< conda initialize <<<
+end
 
 # enable colored 'man'
 set -xU LESS_TERMCAP_md (printf "\e[01;31m")
