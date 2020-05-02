@@ -30,11 +30,11 @@ set expandtab                       " Convert tabs into spaces
 
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-commentary'                             " comment stuff out
-Plug 'tpope/vim-surround'                               " change surrounds
-Plug 'itchyny/lightline.vim'                            " lightline status line
-Plug 'ajh17/vimcompletesme'                             " light-weight tab-completion
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}   " markdown preview
+Plug 'tpope/vim-commentary'                             " Comment stuff out
+Plug 'tpope/vim-surround'                               " Change surrounds
+Plug 'itchyny/lightline.vim'                            " Lightline status line
+Plug 'ajh17/vimcompletesme'                             " Light-weight tab-completion
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}   " Markdown preview
 Plug 'preservim/nerdtree'
 call plug#end()
 
