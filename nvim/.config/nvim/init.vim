@@ -13,6 +13,7 @@ colorscheme dim                     " This scheme only uses ANSI colors and
                                     " should match the terminal colors
 
 set nocompatible                    " Don't emulate vi
+set mouse=a                         " Enable mouse support
 set showmatch                       " Highlight matching brace
 set hlsearch                        " Highlight all search results
 set ignorecase                      " Search case insensitively
