@@ -1,8 +1,9 @@
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
-	echo "Downloading junegunn/vim-plug to manage plugins..."
-	silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
-	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
-	autocmd VimEnter * PlugInstall
+    echo "Downloading junegunn/vim-plug to manage plugins..."
+    silent !mkdir -p ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/
+    silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+                \ > ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim
+    autocmd VimEnter * PlugInstall
 endif
 
 filetype plugin on                  " Load plugins based on file type
@@ -35,7 +36,7 @@ Plug 'tpope/vim-surround'                               " Change surrounds
 Plug 'itchyny/lightline.vim'                            " Lightline status line
 Plug 'ajh17/vimcompletesme'                             " Light-weight tab-completion
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}   " Markdown preview
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'                               " Tree explore plugin
 call plug#end()
 
 let mapleader=","
