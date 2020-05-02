@@ -20,4 +20,4 @@ export PATH="$PATH:$HOME/ext/julia-1.4.0/bin"
 
 # fzf customization
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_DEFAULT_OPTS='--height 50% --layout=reverse --border'
+export FZF_DEFAULT_OPTS='--height 70% --layout=reverse --border'
