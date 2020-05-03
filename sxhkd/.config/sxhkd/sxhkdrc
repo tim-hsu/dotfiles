@@ -1,0 +1,12 @@
+# Restart sxhkd
+super + shift + r
+    killall sxhkd; sxhkd &
+
+super + Return
+    konsole
+
+ctrl + alt + s
+    systemsettings5
+
+ctrl + alt + {f,b,d,y}
+    {firefox,brave,dolphin,yakuake}
