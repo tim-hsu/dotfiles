@@ -5,6 +5,7 @@ My personal dotfiles.
 The dotfiles are only a part of the configuration and the whole customized user experience. The following packages may need to be installed for the configuration to work well.
 
 * In general:
+    * `xdg-user-dir`
     * `miniconda`
     * `julia`
     * `keychain`
