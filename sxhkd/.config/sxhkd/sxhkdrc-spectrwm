@@ -1,0 +1,21 @@
+# Restart sxhkd
+super + alt + r
+    killall sxhkd; sxhkd -c $HOME/.config/sxhkd/sxhkdrc-spectrwm &
+
+# redshift
+super + alt + 0
+    bash $HOME/scripts/redshift/set-temp.sh 6500
+
+super + alt + {equal,minus}
+    bash $HOME/scripts/redshift/increment-temp.sh {+200,-200}
+
+# Audio
+XF86Audio{Raise,Lower}Volume
+    amixer -q -D default set Master 5%{+,-}
+
+XF86AudioMute
+    amixer set Master toggle
+
+# Launch stuff
+ctrl + alt + {f,b}
+    {firefox,brave}

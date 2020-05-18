@@ -1,12 +1,38 @@
 # Restart sxhkd
-super + shift + r
-    killall sxhkd; sxhkd &
+super + alt + r
+    killall sxhkd; sxhkd & kdialog --passivepopup "sxhkd reloaded" 1
 
-super + Return
+# redshift
+super + alt + 0
+    bash $HOME/scripts/redshift/set-temp.sh 6500
+
+super + alt + {equal,minus}
+    bash $HOME/scripts/redshift/increment-temp.sh {+200,-200}
+
+# dmenu
+super + p
+    dmenu_run -fn "Inconsolata-18" -p "Run:"
+
+super + shift + p
+    find $HOME/scripts/dmenu/ -name "*.sh" \
+    | dmenu -fn "Inconsolata-18" -l 20 -p "Run:" \
+    | bash
+
+# Launch stuff
+super + shift + Return
+    kitty
+
+ctrl + alt + k
     konsole
 
 ctrl + alt + s
     systemsettings5
 
-ctrl + alt + {f,b,d,y}
-    {firefox,brave,dolphin,yakuake}
+ctrl + alt + {f,b,d,y,m}
+    {firefox,brave,dolphin,yakuake,spotify}
+
+ctrl + alt + r
+    konsole -e ranger
+
+super + Print
+    spectacle -gr
