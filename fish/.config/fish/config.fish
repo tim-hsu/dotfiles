@@ -16,4 +16,5 @@ set -xU LESS_TERMCAP_ue (printf "\e[0m")
 set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 
 # Aliases
-alias fzf-pacman="fzf --preview 'pacman -Si {}'"
+alias fzf-pacman-Si="fzf -m --preview 'pacman -Si {}' --preview-window=70%"
+alias fzf-pacman-Qi="fzf -m --preview 'pacman -Qi {}' --preview-window=70%"
