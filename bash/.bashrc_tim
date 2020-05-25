@@ -17,11 +17,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# environmental variables 
+# Environmental variables
 export EDITOR=nvim
 
-# set up keychain
+# Set up keychain
 [ $(command -v keychain) ] && eval $(keychain --quiet --eval id_rsa)
 
-# drop into fish
+# Drop into fish
 [[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish
