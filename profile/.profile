@@ -21,3 +21,6 @@ export PATH="$PATH:$HOME/ext/julia-1.4.0/bin"
 # fzf customization
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 70% --layout=reverse --border'
+
+# zsh dotfile location
+export ZDOTDIR="$XDG_CONFIG_HOME"/zsh

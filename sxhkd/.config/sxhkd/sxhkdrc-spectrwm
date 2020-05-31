@@ -17,5 +17,5 @@ XF86AudioMute
     amixer set Master toggle
 
 # Launch stuff
-ctrl + alt + {f,b}
-    {firefox,brave}
+ctrl + alt + {f,b,m}
+    {firefox,brave,spotify}

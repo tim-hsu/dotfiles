@@ -11,11 +11,11 @@ super + alt + {equal,minus}
 
 # dmenu
 super + p
-    dmenu_run -fn "Inconsolata-18" -p "Run:"
+    dmenu_run -fn "Inconsolata-14" -p "Run:"
 
 super + shift + p
     find $HOME/scripts/dmenu/ -name "*.sh" \
-    | dmenu -fn "Inconsolata-18" -l 20 -p "Run:" \
+    | dmenu -fn "Inconsolata-14" -l 20 -p "Run:" \
     | bash
 
 # Launch stuff
