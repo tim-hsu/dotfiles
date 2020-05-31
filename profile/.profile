@@ -24,3 +24,6 @@ export FZF_DEFAULT_OPTS='--height 70% --layout=reverse --border'
 
 # zsh dotfile location
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+
+# Key autorepeat speed
+[ $(command -v xset) ] && xset r rate 300 40

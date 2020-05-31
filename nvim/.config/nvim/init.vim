@@ -29,6 +29,7 @@ set tabstop=4                       " Show tabs as 4 spaces
 set softtabstop=4                   " Number of spaces for inserting a tab
 set shiftwidth=4                    " Number of spaces for indenting 
 set expandtab                       " Convert tabs into spaces
+set clipboard+=unnamedplus          " Use system clipboard
 
 " Plugins (vim-plug)
 call plug#begin('~/.vim/plugged')

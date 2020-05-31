@@ -13,7 +13,3 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 # Aliases
 alias fzf-pacman-Si="fzf -m --preview 'pacman -Si {}' --preview-window=70%"
 alias fzf-pacman-Qi="fzf -m --preview 'pacman -Qi {}' --preview-window=70%"
-
-# Powerline
-set fish_function_path $fish_function_path "/usr/share/powerline/bindings/fish"
-powerline-setup
