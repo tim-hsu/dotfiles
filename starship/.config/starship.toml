@@ -18,22 +18,20 @@ prompt_order = [
 
 add_newline = false
 
-[character]
-error_symbol = "✗"
-use_symbol_for_status = true
-
 [git_status]
-modified.style         = "yellow"
-modified_count.style   = "yellow"
-modified_count.enabled = true
+modified.style          = "yellow"
+modified_count.style    = "yellow"
+modified_count.enabled  = true
 
 untracked.style         = "blue"
 untracked_count.style   = "blue"
 untracked_count.enabled = true
 
-staged.style         = "green"
-staged_count.style   = "green"
-staged_count.enabled = true
+staged.style            = "green"
+staged_count.style      = "green"
+staged_count.enabled    = true
+
+show_sync_count         = true
 
 [conda]
 symbol = " "
