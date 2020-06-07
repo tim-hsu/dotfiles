@@ -19,5 +19,5 @@ conda-start() {
 # Set up keychain
 [ $(command -v keychain) ] && eval $(keychain --quiet --eval id_rsa)
 
-# Drop into fish
+# Drop into fish (if parent process is not fish)
 [[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish

@@ -13,3 +13,6 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 # Aliases
 alias fzf-pacman-Si="fzf -m --preview 'pacman -Si {}' --preview-window=70%"
 alias fzf-pacman-Qi="fzf -m --preview 'pacman -Qi {}' --preview-window=70%"
+
+# Starship prompt
+starship init fish | source
