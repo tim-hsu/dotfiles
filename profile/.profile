@@ -2,6 +2,18 @@
 # ~/.profile
 #
 
+export EDITOR=nvim
+export VISUAL=nvim
+export PAGER=less
+
+# Enable colored 'man'
+export LESS_TERMCAP_md=$'\e[01;31m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;44;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[01;32m'
+
 # XDG specs
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
@@ -21,9 +33,6 @@ export PATH="$PATH:$HOME/ext/julia-1.4.0/bin"
 # fzf customization
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS='--height 70% --layout=reverse --border'
-
-# zsh dotfile location
-export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 
 # Key autorepeat speed
 [ $(command -v xset) ] && xset r rate 300 40

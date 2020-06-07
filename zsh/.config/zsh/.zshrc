@@ -1,9 +1,18 @@
-HISTFILE=~/.local/share/zsh_histfile
-HISTSIZE=10000
-SAVEHIST=10000
+# Get colors
+autoload -U colors && colors
+
+# History settings
+HISTFILE="$HOME"/.local/share/zsh_histfile
+HISTSIZE=2000
+SAVEHIST=2000
+
+# Use emacs keybindings
 bindkey -e
+
+# Auto/tab complete
 zstyle ':completion:*' menu yes select
 
+# Shell options
 setopt autocd                   # Navigate to directories without ls
 setopt CORRECT                  # Typo correction
 setopt APPEND_HISTORY           # Addition of the history file
@@ -42,10 +51,10 @@ if ! zgen saved; then
 fi
 
 # Keybinding
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey '^[[1;5D' backward-word
-bindkey '^[[1;5C' forward-word
+bindkey '^[[A'    history-substring-search-up   # up
+bindkey '^[[B'    history-substring-search-down # down
+bindkey '^[[1;5D' backward-word                 # ctrl-left
+bindkey '^[[1;5C' forward-word                  # ctrl-right
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f "$ZDOTDIR"/.p10k.zsh ]] || source "$ZDOTDIR"/.p10k.zsh

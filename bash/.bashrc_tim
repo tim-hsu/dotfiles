@@ -16,9 +16,6 @@ conda-start() {
     fi
 }
 
-# Environmental variables
-export EDITOR=nvim
-
 # Set up keychain
 [ $(command -v keychain) ] && eval $(keychain --quiet --eval id_rsa)
 
