@@ -4,6 +4,7 @@
 
 export EDITOR=nvim
 export VISUAL=nvim
+export BROWSER=brave
 export PAGER=less
 
 # Enable colored 'man'
@@ -21,10 +22,13 @@ export XDG_DATA_HOME="$HOME"/.local/share
 
 # Attempt XDG compliance
 export LESSHISTFILE=-
-export ATOM_HOME="$XDG_DATA_HOME"/atom
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+export KDEHOME="$XDG_CONFIG_HOME"/kde
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export PYLINTHOME="$XDG_CACHE_HOME"/pylint
-export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc-2.0
+export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 # Add julia path

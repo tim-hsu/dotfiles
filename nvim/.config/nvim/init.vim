@@ -37,7 +37,6 @@ Plug 'tpope/vim-commentary'                             " Comment stuff out
 Plug 'tpope/vim-surround'                               " Change surrounds
 Plug 'itchyny/lightline.vim'                            " Lightline status line
 Plug 'ajh17/vimcompletesme'                             " Light-weight tab-completion
-Plug 'suan/vim-instant-markdown', {'for': 'markdown'}   " Markdown preview
 Plug 'preservim/nerdtree'                               " Tree explore plugin
 call plug#end()
 

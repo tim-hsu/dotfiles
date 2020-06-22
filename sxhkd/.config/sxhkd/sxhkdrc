@@ -1,6 +1,7 @@
 # Restart sxhkd
 super + alt + r
-    killall sxhkd; sxhkd & kdialog --passivepopup "sxhkd reloaded" 1
+    killall sxhkd; sxhkd & \
+    kdialog --passivepopup "sxhkd reloaded" 1
 
 # redshift
 super + alt + 0
@@ -30,9 +31,6 @@ ctrl + alt + s
 
 ctrl + alt + {f,b,d,y,m}
     {firefox,brave,dolphin,yakuake,spotify}
-
-ctrl + alt + r
-    konsole -e ranger
 
 super + Print
     spectacle -gr

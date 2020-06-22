@@ -2,22 +2,5 @@
 # ~/.bashrc_tim
 #
 
-conda-start() {
-    MINICONDA_PATH="$HOME"/ext/miniconda3
-    __conda_setup="$("$MINICONDA_PATH/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "$MINICONDA_PATH/etc/profile.d/conda.sh" ]; then
-            . "$MINICONDA_PATH/etc/profile.d/conda.sh"
-        else
-            export PATH="$MINICONDA_PATH/bin:$PATH"
-        fi
-    fi
-}
-
-# Set up keychain
-[ $(command -v keychain) ] && eval $(keychain --quiet --eval id_rsa)
-
 # Drop into fish (if parent process is not fish)
 [[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish

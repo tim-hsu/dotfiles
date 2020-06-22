@@ -14,14 +14,10 @@ zstyle ':completion:*' menu yes select
 
 # Shell options
 setopt autocd                   # Navigate to directories without ls
-setopt CORRECT                  # Typo correction
-setopt APPEND_HISTORY           # Addition of the history file
 setopt HIST_IGNORE_ALL_DUPS     # Ignore all repetitions of commands
 setopt HIST_FIND_NO_DUPS        # Do not display the string found earlier
 setopt HIST_IGNORE_DUPS         # Ignore rows if they are duplicates
 setopt HIST_REDUCE_BLANKS       # Delete empty lines from history file
-setopt HIST_IGNORE_SPACE        # Ignore a record starting with a space
-setopt HIST_NO_STORE            # Do not add history and fc commands to the history
 
 # Aliases
 alias ls="ls --color=auto"
@@ -55,6 +51,8 @@ bindkey '^[[A'    history-substring-search-up   # up
 bindkey '^[[B'    history-substring-search-down # down
 bindkey '^[[1;5D' backward-word                 # ctrl-left
 bindkey '^[[1;5C' forward-word                  # ctrl-right
+bindkey '^[[1;3D' backward-word                 # alt-left
+bindkey '^[[1;3C' forward-word                  # alt-right
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f "$ZDOTDIR"/.p10k.zsh ]] || source "$ZDOTDIR"/.p10k.zsh

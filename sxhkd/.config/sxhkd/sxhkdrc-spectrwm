@@ -1,6 +1,7 @@
 # Restart sxhkd
 super + alt + r
-    killall sxhkd; sxhkd -c $HOME/.config/sxhkd/sxhkdrc-spectrwm &
+    killall sxhkd; sxhkd -c $HOME/.config/sxhkd/sxhkdrc-spectrwm & \
+    notify-send "sxhkd reloaded"
 
 # redshift
 super + alt + 0
