@@ -1,6 +1,0 @@
-#
-# ~/.bashrc_tim
-#
-
-# Drop into fish (if parent process is not fish)
-[[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish

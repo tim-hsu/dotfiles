@@ -60,3 +60,6 @@ bindkey '^H'      backward-kill-word            # ctrl-backspace
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f "$ZDOTDIR"/.p10k.zsh ]] || source "$ZDOTDIR"/.p10k.zsh
+
+# Drop into fish (if parent process is not fish)
+[[ $(ps -p $PPID -o command | awk 'NR>1') != "fish" ]] && exec fish

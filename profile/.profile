@@ -4,7 +4,6 @@
 
 export EDITOR=nvim
 export VISUAL=nvim
-export BROWSER=brave
 export PAGER=less
 
 # Enable colored 'man'
