@@ -9,15 +9,19 @@ SAVEHIST=2000
 # Use emacs keybindings
 bindkey -e
 
-# Auto/tab complete
-zstyle ':completion:*' menu yes select
-
 # Shell options
 setopt autocd                   # Navigate to directories without ls
-setopt HIST_IGNORE_ALL_DUPS     # Ignore all repetitions of commands
-setopt HIST_FIND_NO_DUPS        # Do not display the string found earlier
-setopt HIST_IGNORE_DUPS         # Ignore rows if they are duplicates
-setopt HIST_REDUCE_BLANKS       # Delete empty lines from history file
+setopt appendhistory            # Immediately append history instead of overwriting
+setopt histignorealldups        # If a new command is a duplicate, remove the older one
+
+# Case insensitive tab completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+# Colored completion (different colors for dirs/files/etc)
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# Automatically find new executables in path
+zstyle ':completion:*' rehash true
+# Don't consider certain characters part of the word
+WORDCHARS=${WORDCHARS//\/[&.;]}
 
 # Aliases
 alias ls="ls --color=auto"
@@ -39,20 +43,20 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-autosuggestions
     zgen load zsh-users/zsh-history-substring-search
-    zgen load zsh-users/zsh-completions
     zgen load romkatv/powerlevel10k powerlevel10k
 
     # Generate the init script from plugins above
     zgen save
 fi
 
-# Keybinding
+# Keybindings
 bindkey '^[[A'    history-substring-search-up   # up
 bindkey '^[[B'    history-substring-search-down # down
 bindkey '^[[1;5D' backward-word                 # ctrl-left
 bindkey '^[[1;5C' forward-word                  # ctrl-right
 bindkey '^[[1;3D' backward-word                 # alt-left
 bindkey '^[[1;3C' forward-word                  # alt-right
+bindkey '^H'      backward-kill-word            # ctrl-backspace
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f "$ZDOTDIR"/.p10k.zsh ]] || source "$ZDOTDIR"/.p10k.zsh
