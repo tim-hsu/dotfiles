@@ -9,3 +9,6 @@ ranger/**/plugins/devicons_linemode.py
 # nvim/vim
 nvim/**/autoload/
 .netrwhist
+
+# zsh
+.zcompdump
