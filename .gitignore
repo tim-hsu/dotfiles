@@ -12,3 +12,4 @@ nvim/**/autoload/
 
 # zsh
 .zcompdump
+.p10k.zsh
