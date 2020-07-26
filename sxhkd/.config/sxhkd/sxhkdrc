@@ -1,7 +1,7 @@
 # Restart sxhkd
 super + alt + r
     killall sxhkd; sxhkd & \
-    kdialog --passivepopup "sxhkd reloaded" 1
+	notify-send "sxhkd reloaded"
 
 # redshift
 super + alt + 0

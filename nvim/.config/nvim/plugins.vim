@@ -9,6 +9,7 @@ endif
 " Plugins (vim-plug)
 call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'tpope/vim-commentary'             " Comment stuff out
+Plug 'tpope/vim-fugitive'               " Git integration
 Plug 'tpope/vim-surround'               " Change surrounds
 Plug 'itchyny/lightline.vim'            " Lightline status line
 Plug 'preservim/nerdtree'               " Tree explore plugin
@@ -28,10 +29,13 @@ map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
 
 " Toggle goyo mode
-map <leader>g :Goyo<CR>
+map <leader>z :Goyo<CR>
 
 " fzf settings
 nnoremap <A-f> :Files<CR>
 nnoremap <A-g> :GFiles<CR>
 nnoremap <A-b> :Buffers<CR>
 let g:fzf_preview_window = 'right:60%'
+
+" Vim-fugitive keybindings
+nmap <leader>gs :Git<CR>
