@@ -8,6 +8,7 @@ colorscheme dim                     " This scheme only uses ANSI colors and
                                     " should match the terminal colors
 
 set nocompatible                    " Don't emulate vi
+set nowrap                          " No line wrapping
 set hidden                          " Required to keep multiple buffers open
 set noswapfile                      " No need for swapfiles
 set mouse=a                         " Enable mouse support
