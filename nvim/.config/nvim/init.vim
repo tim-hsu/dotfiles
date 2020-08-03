@@ -38,10 +38,6 @@ noremap <leader>h :set hlsearch!<CR>
 " Toggle spell check
 noremap <leader>s :setlocal spell!<CR>
 
-" Copy into @+ and paste from @+
-vnoremap <C-c> "+y<CR>
-map      <C-p> "+P
-
 " Replace all
 nnoremap S :%s//g<Left><Left>
 
@@ -61,9 +57,9 @@ noremap <silent> <C-Down>  :resize -3<CR>
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
-" Tab and Shift-Tab for switch to buffer
-nnoremap <TAB>   :bnext<CR>
-nnoremap <S-TAB> :bprevious<CR>
+" Switch to buffers and tabs
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
 
 " Better tabbing
 vnoremap < <gv
