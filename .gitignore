@@ -13,3 +13,6 @@ nvim/**/autoload/
 # zsh
 .zcompdump
 .p10k.zsh
+
+# fish
+fish/**/fish_variables

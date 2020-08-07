@@ -33,4 +33,4 @@ ctrl + alt + {f,b,d,y,m}
     {firefox,brave,dolphin,yakuake,spotify}
 
 super + Print
-    spectacle -gr
+    flameshot gui
