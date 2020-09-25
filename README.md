@@ -20,9 +20,6 @@ The dotfiles are only a part of the configuration and the whole customized user 
     * powerline-go
 * For `zsh`:
     * `zgen`
-* For `ranger` preview:
-    * `w3m`
-    * `atool`
-    * `highlight`
-    * `pandoc` (haskell dependencies)
-    * Check out the `scope.sh` file or `pacman -Si ranger` for more information
+* For `ranger`:
+    * Check out the `scope.sh` file or `pacman -Si ranger` for installing optional dependencies
+    * `dragon-drag-and-drop`
