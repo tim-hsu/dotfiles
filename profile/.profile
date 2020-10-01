@@ -5,6 +5,7 @@
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
+export READER=zathura
 
 # Enable colored 'man'
 export LESS_TERMCAP_mb=$'\E[01;32m'

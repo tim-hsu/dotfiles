@@ -12,6 +12,7 @@ The dotfiles are only a part of the configuration and the whole customized user 
     * `xdg-user-dir`
     * `sxiv`
     * `zathura`
+    * `flameshot`
 * Computing:
     * `miniconda`
     * `julia`
@@ -21,5 +22,6 @@ The dotfiles are only a part of the configuration and the whole customized user 
 * For `zsh`:
     * `zgen`
 * For `ranger`:
-    * Check out the `scope.sh` file or `pacman -Si ranger` for installing optional dependencies
+    * Check out `scope.sh` file or `pacman -Si ranger` for installing optional dependencies
     * `dragon-drag-and-drop`
+    * `ueberzug`
