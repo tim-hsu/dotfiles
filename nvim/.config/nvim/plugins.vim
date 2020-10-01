@@ -17,12 +17,15 @@ Plug 'junegunn/fzf'                     " Find fzf executable for vim
 Plug 'junegunn/fzf.vim'                 " Additional fzf functionality
 Plug 'junegunn/goyo.vim'                " Distraction-free viewing
 Plug 'kovetskiy/sxhkd-vim'              " Highlighting for sxhkd
-" Plug 'ajh17/vimcompletesme'             " Light-weight tab-completion
+Plug 'arcticicestudio/nord-vim'         " Nord colorscheme
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 call plug#end()
 
 " Source coc settings
 source ~/.config/nvim/coc.vim
+
+" Colorscheme
+colorscheme nord
 
 " NERD tree settings
 map <leader>n :NERDTreeToggle<CR>

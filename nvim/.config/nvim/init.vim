@@ -4,10 +4,7 @@ let g:mapleader = "\<Space>"
 filetype plugin on                  " Load plugins based on file type
 filetype indent on                  " Load indent settings based on file type
 syntax enable                       " Enable syntax highlighting
-colorscheme dim                     " This scheme only uses ANSI colors and
-                                    " should match the terminal colors
 
-set nocompatible                    " Don't emulate vi
 set nowrap                          " No line wrapping
 set hidden                          " Required to keep multiple buffers open
 set noswapfile                      " No need for swapfiles
