@@ -1,37 +1,24 @@
-prompt_order = [
-    "username",
-    "hostname",
-    "directory",
-    "git_branch",
-    "git_commit",
-    "git_state",
-    "git_status",
-    "package",
-    "haskell",
-    "julia",
-    "python",
-    "conda",
-    "cmd_duration",
-    "jobs",
-    "character",
-]
+format = """\
+    $username\
+    $hostname\
+    $directory\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_status\
+    $package\
+    $haskell\
+    $julia\
+    $python\
+    $conda\
+    $cmd_duration\
+    $jobs\
+    $status\
+    $character\
+"""
 
 add_newline = false
 
-[git_status]
-modified.style          = "yellow"
-modified_count.style    = "yellow"
-modified_count.enabled  = true
-
-untracked.style         = "blue"
-untracked_count.style   = "blue"
-untracked_count.enabled = true
-
-staged.style            = "green"
-staged_count.style      = "green"
-staged_count.enabled    = true
-
-show_sync_count         = true
-
-[conda]
-symbol = " "
+[status]
+disabled = false
+symbol = "💣"
