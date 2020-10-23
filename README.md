@@ -13,6 +13,8 @@ The dotfiles are only a part of the configuration and the whole customized user 
     * `sxiv`
     * `zathura`
     * `flameshot`
+    * `dunst`
+    * `redshift`
 * Computing:
     * `miniconda`
     * `julia`
